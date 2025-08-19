@@ -1,0 +1,6 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<% box = (@task.completed ? '<i class="fa-regular fa-square-check"></i> This task is compelted' : '<i class="fa-regular fa-square"></i> This task is not completed yet') %>
+<p><%= raw(box) %></p>
+
+<p><%= link_to "Back to list", tasks_path %></p>

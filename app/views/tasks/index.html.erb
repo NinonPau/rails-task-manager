@@ -1,6 +1,8 @@
 <ul>
   <% @tasks.each do |task| %>
     <% box = (task.completed ? '<i class="fa-regular fa-square-check"></i>' : '<i class="fa-regular fa-square"></i>') %>
-    <li><%= raw(box) %> <%= task.title %></li>
+    <li><%= raw(box) %> <%= link_to task.title, task_path(task) %></li>
   <% end %>
 </ul>
+
+<p><%= link_to "+ Add a new task", new_path %></p>
