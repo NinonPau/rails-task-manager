@@ -1,0 +1,6 @@
+<ul>
+  <% @tasks.each do |task| %>
+    <% box = (task.completed ? '<i class="fa-regular fa-square-check"></i>' : '<i class="fa-regular fa-square"></i>') %>
+    <li><%= raw(box) %> <%= task.title %></li>
+  <% end %>
+</ul>
